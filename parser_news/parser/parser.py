@@ -11,17 +11,17 @@ class Parser:
 
 
 	def main(self):
-		# self.get_data('https://www.ukr.net/ua/news/technologies.html')
+		self.get_data('https://www.ukr.net/ua/news/technologies.html')
 		self.parser()
 		self.browzer.quit()
 
 
-	# def get_data(self, url: str):
-	# 	self.browzer.get(url)
-	# 	time.sleep(3)
+	def get_data(self, url: str):
+		self.browzer.get(url)
+		time.sleep(3)
 
-		# with open('data\\index.html', 'w', encoding='utf-8') as f:
-		# 	f.write(self.browzer.page_source)
+		with open('data\\index.html', 'w', encoding='utf-8') as f:
+			f.write(self.browzer.page_source)
 
 	def parser(self):
 		with open('data\\index.html', encoding='utf-8') as f:
